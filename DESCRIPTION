@@ -1,0 +1,25 @@
+Package: safetyData
+Title: Data for unit testing of {safetyGraphics} and {safetyCharts}
+Version: 0.0.1
+Authors@R: c(
+    person(
+        given = "Jeremy",
+        family = "Wildfire",
+        role = c("aut", "cre"),
+        email = "jwildfire@gilead.com"
+    ),
+    person(
+        given = "Renan",
+        family = "Escalante Chong",
+        role = c("aut"),
+        email = "raescalan@gmail.com"
+    )
+    )
+Description: safetyData contains data used for unit testing
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Depends: 
+    R (>= 2.10)
