@@ -5,23 +5,24 @@
 \alias{suppds}
 \title{suppds}
 \format{
-data.frame
-'data.frame':	3 obs. of  10 variables:
-$ STUDYID : chr  "CDISCPILOT01" "CDISCPILOT01" "CDISCPILOT01"
-$ RDOMAIN : chr  "DS" "DS" "DS"
-$ USUBJID : chr  "01-703-1175" "01-705-1382" "01-708-1372"
-$ IDVAR   : chr  "DSSEQ" "DSSEQ" "DSSEQ"
-$ IDVARVAL: int  1 1 1
-$ QNAM    : chr  "ENTCRIT" "ENTCRIT" "ENTCRIT"
-$ QLABEL  : chr  "PROTOCOL ENTRY CRITERIA NOT MET" "PROTOCOL ENTRY CRITERIA NOT MET" "PROTOCOL ENTRY CRITERIA NOT MET"
-$ QVAL    : int  16 25 16
-$ QORIG   : chr  "CRF" "CRF" "CRF"
-$ QEVAL   : logi  NA NA NA
+a data frame with 3 rows and  10  columns:
+\describe{
+\item{\code{ STUDYID }}{ text - Study Identifier }
+\item{\code{ RDOMAIN }}{ text - Related Domain Abbreviation }
+\item{\code{ USUBJID }}{ text - Unique Subject Identifier }
+\item{\code{ IDVAR }}{ text - Identifying Variable }
+\item{\code{ IDVARVAL }}{ text - Identifying Variable Value }
+\item{\code{ QNAM }}{ text - Qualifier Variable Name }
+\item{\code{ QLABEL }}{ text - Qualifier Variable Label }
+\item{\code{ QVAL }}{ text - Data Value }
+\item{\code{ QORIG }}{ text - Origin }
+\item{\code{ QEVAL }}{ text - Evaluator }
+}
 }
 \usage{
 suppds
 }
 \description{
-suppds
+Supplemental Qualifiers for DS  data frame - One record per IDVAR, IDVARVAL, and QNAM value per subject
 }
 \keyword{datasets}

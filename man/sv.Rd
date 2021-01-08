@@ -5,21 +5,22 @@
 \alias{sv}
 \title{sv}
 \format{
-data.frame
-'data.frame':	3559 obs. of  8 variables:
-$ STUDYID : chr  "CDISCPILOT01" "CDISCPILOT01" "CDISCPILOT01" "CDISCPILOT01" ...
-$ DOMAIN  : chr  "SV" "SV" "SV" "SV" ...
-$ USUBJID : chr  "01-701-1015" "01-701-1015" "01-701-1015" "01-701-1015" ...
-$ VISITNUM: num  1 2 3 3.5 4 5 6 7 8 9 ...
-$ VISIT   : chr  "SCREENING 1" "SCREENING 2" "BASELINE" "AMBUL ECG PLACEMENT" ...
-$ VISITDY : int  -7 -1 1 13 14 28 30 42 56 84 ...
-$ SVSTDTC : chr  "2013-12-26" "2013-12-31" "2014-01-02" "2014-01-14" ...
-$ SVENDTC : chr  "2013-12-26" "2013-12-31" "2014-01-02" "2014-01-14" ...
+a data frame with 3559 rows and  8  columns:
+\describe{
+\item{\code{ STUDYID }}{ text - Study Identifier }
+\item{\code{ DOMAIN }}{ text - Domain Abbreviation }
+\item{\code{ USUBJID }}{ text - Unique Subject Identifier }
+\item{\code{ VISITNUM }}{ float - Visit Number }
+\item{\code{ VISIT }}{ text - Visit Name }
+\item{\code{ VISITDY }}{ integer - Planned Study Day of Visit }
+\item{\code{ SVSTDTC }}{ date - Start Date/Time of Visit }
+\item{\code{ SVENDTC }}{ date - End Date/Time of Visit }
+}
 }
 \usage{
 sv
 }
 \description{
-sv
+Subject Visits  data frame - One record per actual visit per subject
 }
 \keyword{datasets}

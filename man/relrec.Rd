@@ -5,20 +5,21 @@
 \alias{relrec}
 \title{relrec}
 \format{
-data.frame
-'data.frame':	234 obs. of  7 variables:
-$ STUDYID : chr  "CDISCPILOT01" "CDISCPILOT01" "CDISCPILOT01" "CDISCPILOT01" ...
-$ RDOMAIN : chr  "AE" "AE" "AE" "AE" ...
-$ USUBJID : chr  "01-701-1023" "01-701-1047" "01-701-1111" "01-701-1115" ...
-$ IDVAR   : chr  "AESEQ" "AESEQ" "AESEQ" "AESEQ" ...
-$ IDVARVAL: int  2 4 7 7 6 8 9 1 7 9 ...
-$ RELTYPE : logi  NA NA NA NA NA NA ...
-$ RELID   : chr  "01-701-1023-E09" "01-701-1047-E09" "01-701-1111-E16" "01-701-1115-E13" ...
+a data frame with 234 rows and  7  columns:
+\describe{
+\item{\code{ STUDYID }}{ text - Study Identifier }
+\item{\code{ RDOMAIN }}{ text - Related Domain Abbreviation }
+\item{\code{ USUBJID }}{ text - Unique Subject Identifier }
+\item{\code{ IDVAR }}{ text - Identifying Variable }
+\item{\code{ IDVARVAL }}{ text - Identifying Variable Value }
+\item{\code{ RELTYPE }}{ text - Relationship Type }
+\item{\code{ RELID }}{ text - Relationship Identifier }
+}
 }
 \usage{
 relrec
 }
 \description{
-relrec
+Related Records  data frame - One record per related record, group of records or datasets
 }
 \keyword{datasets}

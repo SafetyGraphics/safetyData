@@ -5,23 +5,24 @@
 \alias{suppae}
 \title{suppae}
 \format{
-data.frame
-'data.frame':	1191 obs. of  10 variables:
-$ STUDYID : chr  "CDISCPILOT01" "CDISCPILOT01" "CDISCPILOT01" "CDISCPILOT01" ...
-$ RDOMAIN : chr  "AE" "AE" "AE" "AE" ...
-$ USUBJID : chr  "01-701-1015" "01-701-1015" "01-701-1015" "01-701-1023" ...
-$ IDVAR   : chr  "AESEQ" "AESEQ" "AESEQ" "AESEQ" ...
-$ IDVARVAL: int  1 2 3 1 2 3 4 1 2 1 ...
-$ QNAM    : chr  "AETRTEM" "AETRTEM" "AETRTEM" "AETRTEM" ...
-$ QLABEL  : chr  "TREATMENT EMERGENT FLAG" "TREATMENT EMERGENT FLAG" "TREATMENT EMERGENT FLAG" "TREATMENT EMERGENT FLAG" ...
-$ QVAL    : chr  "Y" "Y" "Y" "Y" ...
-$ QORIG   : chr  "DERIVED" "DERIVED" "DERIVED" "DERIVED" ...
-$ QEVAL   : chr  "CLINICAL STUDY SPONSOR" "CLINICAL STUDY SPONSOR" "CLINICAL STUDY SPONSOR" "CLINICAL STUDY SPONSOR" ...
+a data frame with 1191 rows and  10  columns:
+\describe{
+\item{\code{ STUDYID }}{ text - Study Identifier }
+\item{\code{ RDOMAIN }}{ text - Related Domain Abbreviation }
+\item{\code{ USUBJID }}{ text - Unique Subject Identifier }
+\item{\code{ IDVAR }}{ text - Identifying Variable }
+\item{\code{ IDVARVAL }}{ text - Identifying Variable Value }
+\item{\code{ QNAM }}{ text - Qualifier Variable Name }
+\item{\code{ QLABEL }}{ text - Qualifier Variable Label }
+\item{\code{ QVAL }}{ text - Data Value }
+\item{\code{ QORIG }}{ text - Origin }
+\item{\code{ QEVAL }}{ text - Evaluator }
+}
 }
 \usage{
 suppae
 }
 \description{
-suppae
+Supplemental Qualifiers for AE  data frame - One record per IDVAR, IDVARVAL, and QNAM value per subject
 }
 \keyword{datasets}

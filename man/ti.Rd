@@ -5,19 +5,20 @@
 \alias{ti}
 \title{ti}
 \format{
-data.frame
-'data.frame':	31 obs. of  6 variables:
-$ STUDYID : chr  "CDISCPILOT01" "CDISCPILOT01" "CDISCPILOT01" "CDISCPILOT01" ...
-$ DOMAIN  : chr  "TI" "TI" "TI" "TI" ...
-$ IETESTCD: chr  "INCL01" "INCL02" "INCL03" "INCL04" ...
-$ IETEST  : chr  "Males and postmenopausal females at least 50 years of age." "Diagnosis of probable AD as defined by NINCDS and the ADRDA guidelines (Protocol Attachment LZZT.7)." "MMSE score of 10 to 23." "Modified Hachinski Ischemic Scale score of <= 4. (Protocol Attachment LZZT.8)." ...
-$ IECAT   : chr  "INCLUSION" "INCLUSION" "INCLUSION" "INCLUSION" ...
-$ TIRL    : logi  NA NA NA NA NA NA ...
+a data frame with 31 rows and  6  columns:
+\describe{
+\item{\code{ STUDYID }}{ text - Study Identifier }
+\item{\code{ DOMAIN }}{ text - Domain Abbreviation }
+\item{\code{ IETESTCD }}{ text - Incl/Excl Criterion Short Name }
+\item{\code{ IETEST }}{ text - Inclusion/Exclusion Criterion }
+\item{\code{ IECAT }}{ text - Inclusion/Exclusion Category }
+\item{\code{ TIRL }}{ text - Inclusion/Exclusion Criterion Rule }
+}
 }
 \usage{
 ti
 }
 \description{
-ti
+Trial Inclusion/ Exclusion Criteria  data frame - One record per I/E criterion
 }
 \keyword{datasets}

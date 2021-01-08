@@ -5,20 +5,21 @@
 \alias{te}
 \title{te}
 \format{
-data.frame
-'data.frame':	7 obs. of  7 variables:
-$ STUDYID: chr  "CDISCPILOT01" "CDISCPILOT01" "CDISCPILOT01" "CDISCPILOT01" ...
-$ DOMAIN : chr  "TE" "TE" "TE" "TE" ...
-$ ETCD   : chr  "FOLO" "HIE" "HIM" "HIS" ...
-$ ELEMENT: chr  "Follow_up" "High_End" "High_Middle" "High_Start" ...
-$ TESTRL : chr  "End of last scheduled visit on study (including early termination)" "Administration of first dose (from patches supplied at Visit 12)" "Administration of first dose (from patches supplied at Visit 4)" "Administration of first dose" ...
-$ TEENRL : chr  "Completion of all specified followup activities (which vary on a patient-by-patient basis)" NA NA NA ...
-$ TEDUR  : chr  NA "P2W" "P22W" "P2W" ...
+a data frame with 7 rows and  7  columns:
+\describe{
+\item{\code{ STUDYID }}{ text - Study Identifier }
+\item{\code{ DOMAIN }}{ text - Domain Abbreviation }
+\item{\code{ ETCD }}{ text - Element Code }
+\item{\code{ ELEMENT }}{ text - Description of Element }
+\item{\code{ TESTRL }}{ text - Rule for Start of Element }
+\item{\code{ TEENRL }}{ text - Rule for End of Element }
+\item{\code{ TEDUR }}{ text - Planned Duration of Element }
+}
 }
 \usage{
 te
 }
 \description{
-te
+Trial Elements  data frame - One record per planned Element
 }
 \keyword{datasets}

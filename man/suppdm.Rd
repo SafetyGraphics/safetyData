@@ -5,23 +5,24 @@
 \alias{suppdm}
 \title{suppdm}
 \format{
-data.frame
-'data.frame':	1197 obs. of  10 variables:
-$ STUDYID : chr  "CDISCPILOT01" "CDISCPILOT01" "CDISCPILOT01" "CDISCPILOT01" ...
-$ RDOMAIN : chr  "DM" "DM" "DM" "DM" ...
-$ USUBJID : chr  "01-701-1015" "01-701-1015" "01-701-1015" "01-701-1015" ...
-$ IDVAR   : logi  NA NA NA NA NA NA ...
-$ IDVARVAL: logi  NA NA NA NA NA NA ...
-$ QNAM    : chr  "COMPLT16" "COMPLT24" "COMPLT8" "EFFICACY" ...
-$ QLABEL  : chr  "Completers of Week 16 Population Flag" "Completers of Week 24 Population Flag" "Completers of Week 8 Population Flag" "Efficacy Population Flag" ...
-$ QVAL    : chr  "Y" "Y" "Y" "Y" ...
-$ QORIG   : chr  "DERIVED" "DERIVED" "DERIVED" "DERIVED" ...
-$ QEVAL   : chr  "CLINICAL STUDY SPONSOR" "CLINICAL STUDY SPONSOR" "CLINICAL STUDY SPONSOR" "CLINICAL STUDY SPONSOR" ...
+a data frame with 1197 rows and  10  columns:
+\describe{
+\item{\code{ STUDYID }}{ text - Study Identifier }
+\item{\code{ RDOMAIN }}{ text - Related Domain Abbreviation }
+\item{\code{ USUBJID }}{ text - Unique Subject Identifier }
+\item{\code{ IDVAR }}{ text - Identifying Variable }
+\item{\code{ IDVARVAL }}{ text - Identifying Variable Value }
+\item{\code{ QNAM }}{ text - Qualifier Variable Name }
+\item{\code{ QLABEL }}{ text - Qualifier Variable Label }
+\item{\code{ QVAL }}{ text - Data Value }
+\item{\code{ QORIG }}{ text - Origin }
+\item{\code{ QEVAL }}{ text - Evaluator }
+}
 }
 \usage{
 suppdm
 }
 \description{
-suppdm
+Supplemental Qualifiers for DM  data frame - One record per IDVAR, IDVARVAL, and QNAM value per subject
 }
 \keyword{datasets}

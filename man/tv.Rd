@@ -5,22 +5,23 @@
 \alias{tv}
 \title{tv}
 \format{
-data.frame
-'data.frame':	21 obs. of  9 variables:
-$ STUDYID : chr  "CDISCPILOT01" "CDISCPILOT01" "CDISCPILOT01" "CDISCPILOT01" ...
-$ DOMAIN  : chr  "TV" "TV" "TV" "TV" ...
-$ VISITNUM: num  1 2 3 3.5 4 5 6 7 8 8.1 ...
-$ VISIT   : chr  "SCREENING 1" "SCREENING 2" "BASELINE" "AMBUL ECG PLACEMENT" ...
-$ VISITDY : int  -7 -1 1 13 14 28 30 42 56 70 ...
-$ ARMCD   : logi  NA NA NA NA NA NA ...
-$ ARM     : logi  NA NA NA NA NA NA ...
-$ TVSTRL  : chr  "Start of Screen Epoch" "Start of Visitnum 3 - 24H" "(Just Before) Start of Treatment Epoch" "Start of Visitnum  4 - 24H" ...
-$ TVENRL  : chr  "completion of screening activities" "subject leaves clinic after connection of ambulatory ECG machine" "After application of first dose" NA ...
+a data frame with 21 rows and  9  columns:
+\describe{
+\item{\code{ STUDYID }}{ text - Study Identifier }
+\item{\code{ DOMAIN }}{ text - Domain Abbreviation }
+\item{\code{ VISITNUM }}{ float - Visit Number }
+\item{\code{ VISIT }}{ text - Visit Name }
+\item{\code{ VISITDY }}{ integer - Planned Study Day of Visit }
+\item{\code{ ARMCD }}{ text - Planned Arm Code }
+\item{\code{ ARM }}{ text - Description of Planned Arm }
+\item{\code{ TVSTRL }}{ text - Visit Start Rule }
+\item{\code{ TVENRL }}{ text - Visit End Rule }
+}
 }
 \usage{
 tv
 }
 \description{
-tv
+Trial Visits  data frame - One record per planned Visit per Arm
 }
 \keyword{datasets}

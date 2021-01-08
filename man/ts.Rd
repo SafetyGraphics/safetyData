@@ -5,19 +5,20 @@
 \alias{ts}
 \title{ts}
 \format{
-data.frame
-'data.frame':	33 obs. of  6 variables:
-$ STUDYID : chr  "CDISCPILOT01" "CDISCPILOT01" "CDISCPILOT01" "CDISCPILOT01" ...
-$ DOMAIN  : chr  "TS" "TS" "TS" "TS" ...
-$ TSSEQ   : int  1 1 1 1 2 1 1 1 1 1 ...
-$ TSPARMCD: chr  "ADDON" "AGEMAX" "AGEMIN" "AGESPAN" ...
-$ TSPARM  : chr  "Added on to Existing Treatments" "Planned Maximum Age of Subjects" "Planned Minimum Age of Subjects" "Age Group" ...
-$ TSVAL   : chr  "Y" "No maximum" "50 years" "ADULT (18-65)" ...
+a data frame with 33 rows and  6  columns:
+\describe{
+\item{\code{ STUDYID }}{ text - Study Identifier }
+\item{\code{ DOMAIN }}{ text - Domain Abbreviation }
+\item{\code{ TSSEQ }}{ integer - Sequence Number }
+\item{\code{ TSPARMCD }}{ text - Trial Summary Parameter Short Name }
+\item{\code{ TSPARM }}{ text - Trial Summary Parameter }
+\item{\code{ TSVAL }}{ text - Parameter Value }
+}
 }
 \usage{
 ts
 }
 \description{
-ts
+Trial Summary  data frame - One record per trial summary parameter value
 }
 \keyword{datasets}

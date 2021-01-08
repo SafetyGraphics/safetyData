@@ -5,26 +5,27 @@
 \alias{ds}
 \title{ds}
 \format{
-data.frame
-'data.frame':	596 obs. of  13 variables:
-$ STUDYID : chr  "CDISCPILOT01" "CDISCPILOT01" "CDISCPILOT01" "CDISCPILOT01" ...
-$ DOMAIN  : chr  "DS" "DS" "DS" "DS" ...
-$ USUBJID : chr  "01-701-1015" "01-701-1015" "01-701-1023" "01-701-1023" ...
-$ DSSEQ   : int  1 2 1 2 3 1 2 1 2 3 ...
-$ DSSPID  : int  NA NA 24 NA NA NA NA NA NA NA ...
-$ DSTERM  : chr  "PROTOCOL COMPLETED" "FINAL LAB VISIT" "ADVERSE EVENT" "FINAL LAB VISIT" ...
-$ DSDECOD : chr  "COMPLETED" "FINAL LAB VISIT" "ADVERSE EVENT" "FINAL LAB VISIT" ...
-$ DSCAT   : chr  "DISPOSITION EVENT" "OTHER EVENT" "DISPOSITION EVENT" "OTHER EVENT" ...
-$ VISITNUM: num  13 13 5 5 201 13 13 5 5 201 ...
-$ VISIT   : chr  "WEEK 26" "WEEK 26" "WEEK 4" "WEEK 4" ...
-$ DSDTC   : chr  "2014-07-02" "2014-07-02T11:45" "2012-09-02" "2012-09-02T10:15" ...
-$ DSSTDTC : chr  "2014-07-02" "2014-07-02" "2012-09-02" "2012-09-02" ...
-$ DSSTDY  : int  182 182 29 29 198 180 180 28 28 182 ...
+a data frame with 596 rows and  13  columns:
+\describe{
+\item{\code{ STUDYID }}{ text - Study Identifier }
+\item{\code{ DOMAIN }}{ text - Domain Abbreviation }
+\item{\code{ USUBJID }}{ text - Unique Subject Identifier }
+\item{\code{ DSSEQ }}{ integer - Sequence Number }
+\item{\code{ DSSPID }}{ text - Sponsor-Defined Identifier }
+\item{\code{ DSTERM }}{ text - Reported Term for the Disposition Event }
+\item{\code{ DSDECOD }}{ text - Standardized Disposition Term }
+\item{\code{ DSCAT }}{ text - Category for Disposition Event }
+\item{\code{ VISITNUM }}{ float - Visit Number }
+\item{\code{ VISIT }}{ text - Visit Name }
+\item{\code{ DSDTC }}{ datetime - Date/Time of Collection }
+\item{\code{ DSSTDTC }}{ date - Start Date/Time of Disposition Event }
+\item{\code{ DSSTDY }}{ integer - Study Day of Start of Disposition Event }
+}
 }
 \usage{
 ds
 }
 \description{
-ds
+Disposition  data frame - One record per disposition status or protocol milestone per subject
 }
 \keyword{datasets}

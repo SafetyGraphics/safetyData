@@ -5,22 +5,23 @@
 \alias{se}
 \title{se}
 \format{
-data.frame
-'data.frame':	752 obs. of  9 variables:
-$ STUDYID: chr  "CDISCPILOT01" "CDISCPILOT01" "CDISCPILOT01" "CDISCPILOT01" ...
-$ DOMAIN : chr  "SE" "SE" "SE" "SE" ...
-$ USUBJID: chr  "01-701-1015" "01-701-1015" "01-701-1023" "01-701-1023" ...
-$ SESEQ  : int  1 4 1 4 6 1 3 4 5 1 ...
-$ ETCD   : chr  "SCRN" "PBO" "SCRN" "PBO" ...
-$ ELEMENT: chr  "Screen" "Placebo" "Screen" "Placebo" ...
-$ SESTDTC: chr  "2013-12-26" "2014-01-02" "2012-07-22" "2012-08-05" ...
-$ SEENDTC: chr  "2014-01-02" "2014-07-02" "2012-08-05" "2013-02-18" ...
-$ SEUPDES: chr  NA NA NA NA ...
+a data frame with 752 rows and  9  columns:
+\describe{
+\item{\code{ STUDYID }}{ text - Study Identifier }
+\item{\code{ DOMAIN }}{ text - Domain Abbreviation }
+\item{\code{ USUBJID }}{ text - Unique Subject Identifier }
+\item{\code{ SESEQ }}{ integer - Sequence Number }
+\item{\code{ ETCD }}{ text - Element Code }
+\item{\code{ ELEMENT }}{ text - Description of Element }
+\item{\code{ SESTDTC }}{ date - Start Date/Time of Element }
+\item{\code{ SEENDTC }}{ date - End Date/Time of Element }
+\item{\code{ SEUPDES }}{ text - Description of Unplanned Element }
+}
 }
 \usage{
 se
 }
 \description{
-se
+Subject Elements  data frame - One record per actual Element per subject
 }
 \keyword{datasets}

@@ -5,23 +5,24 @@
 \alias{ta}
 \title{ta}
 \format{
-data.frame
-'data.frame':	8 obs. of  10 variables:
-$ STUDYID : chr  "CDISCPILOT01" "CDISCPILOT01" "CDISCPILOT01" "CDISCPILOT01" ...
-$ DOMAIN  : chr  "TA" "TA" "TA" "TA" ...
-$ ARMCD   : chr  "Pbo" "Pbo" "Xan_Hi" "Xan_Hi" ...
-$ ARM     : chr  "Placebo" "Placebo" "Xanomeline High Dose" "Xanomeline High Dose" ...
-$ TAETORD : int  1 2 1 2 3 4 1 2
-$ ETCD    : chr  "SCRN" "PBO" "SCRN" "HIS" ...
-$ ELEMENT : chr  "Screen" "Placebo" "Screen" "High_Start" ...
-$ TABRANCH: chr  "Randomized to Placebo" NA "Randomized to High Dose" NA ...
-$ TATRANS : logi  NA NA NA NA NA NA ...
-$ EPOCH   : chr  "Screening" "Treatment" "Screening" "Treatment" ...
+a data frame with 8 rows and  10  columns:
+\describe{
+\item{\code{ STUDYID }}{ text - Study Identifier }
+\item{\code{ DOMAIN }}{ text - Domain Abbreviation }
+\item{\code{ ARMCD }}{ text - Planned Arm Code }
+\item{\code{ ARM }}{ text - Description of Planned Arm }
+\item{\code{ TAETORD }}{ integer - Order of Element within Arm }
+\item{\code{ ETCD }}{ text - Element Code }
+\item{\code{ ELEMENT }}{ text - Description of Element }
+\item{\code{ TABRANCH }}{ text - Branch }
+\item{\code{ TATRANS }}{ text - Transition Rule }
+\item{\code{ EPOCH }}{ text - Epoch }
+}
 }
 \usage{
 ta
 }
 \description{
-ta
+Trial Arms  data frame - One record per planned Element per Arm
 }
 \keyword{datasets}
