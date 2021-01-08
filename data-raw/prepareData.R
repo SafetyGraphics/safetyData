@@ -1,13 +1,13 @@
-# Make sure working directory is set to root for the pacakge (not ./data-raw or ./data)
 library(dplyr)
 library(usethis)
+library(here)
 
 # Clear global environment
 rm(list = ls())
 
 # Copy csv files in /data-raw to /data and create roxygen documentation in /R
 paths<-list.files(
-    "data-raw", 
+    here::here("data-raw"), 
     pattern = "\\.csv$", 
     ignore.case=TRUE, 
     full.names=FALSE, 
@@ -63,6 +63,6 @@ roxyheaders <- unlist(
 )
 
 
-cat(roxyheaders, file="R/domains.R", sep="\n")
+cat(roxyheaders, file=here::here("R/domains.R"), sep="\n")
 
 
