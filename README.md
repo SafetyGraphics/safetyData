@@ -1,3 +1,7 @@
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/SafetyGraphics/safetyData/workflows/R-CMD-check/badge.svg)](https://github.com/SafetyGraphics/safetyData/actions)
+<!-- badges: end -->
+  
 # safetyData
 
 safetyData is an R package with sample CDISC clinical trial data sets.

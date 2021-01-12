@@ -1,5 +1,5 @@
 on:
-  pull:
+  pull_request:
       - main
       - dev
 
