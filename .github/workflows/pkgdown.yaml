@@ -1,8 +1,7 @@
 on:
-  push:
-    branches:
+  pull:
       - main
-      - master
+      - dev
 
 name: pkgdown
 
