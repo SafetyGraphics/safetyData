@@ -1,5 +1,6 @@
 library(dplyr)
 library(usethis)
+here::i_am("data-raw/sdtm/prepareData.R")
 library(here)
 
 # Copy csv files in /data-raw to /data and create roxygen documentation in /R
