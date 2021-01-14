@@ -1,0 +1,314 @@
+Form,Variable,Label,Key,Type,Length,Code List / Controlled Terms,Origin,Role,Source/Derivation/Comments
+TA,STUDYID,Study Identifier,,text,12,,CRF Page 7,IDENTIFIER,
+TA,DOMAIN,Domain Abbreviation,,text,2,,Assigned,IDENTIFIER,
+TA,ARMCD,Planned Arm Code,,text,8,ARMCD,Assigned,TOPIC,
+TA,ARM,Description of Planned Arm,,text,20,ARM,Protocol,SYNONYM QUALIFIER,
+TA,TAETORD,Order of Element within Arm,,integer,8,,Assigned,IDENTIFIER,
+TA,ETCD,Element Code,,text,200,ETCD,Assigned,RECORD QUALIFIER,
+TA,ELEMENT,Description of Element,,text,200,ELEMENT,Protocol,SYNONYM QUALIFIER,
+TA,TABRANCH,Branch,,text,200,,Protocol,RULE,
+TA,TATRANS,Transition Rule,,text,200,,Protocol,RULE,
+TA,EPOCH,Epoch,,text,200,EPOCH,Protocol,TIMING,
+TE,STUDYID,Study Identifier,,text,12,,CRF Page 7,IDENTIFIER,
+TE,DOMAIN,Domain Abbreviation,,text,2,,Assigned,IDENTIFIER,
+TE,ETCD,Element Code,,text,200,ETCD,Assigned,TOPIC,
+TE,ELEMENT,Description of Element,,text,200,ELEMENT,Protocol,SYNONYM QUALIFIER,
+TE,TESTRL,Rule for Start of Element,,text,200,,Protocol,RULE,
+TE,TEENRL,Rule for End of Element,,text,200,,Protocol,RULE,
+TE,TEDUR,Planned Duration of Element,,text,200,ISO8601,Protocol,TIMING,
+TI,STUDYID,Study Identifier,,text,12,,CRF Page 7,IDENTIFIER,
+TI,DOMAIN,Domain Abbreviation,,text,2,,Assigned,IDENTIFIER,
+TI,IETESTCD,Incl/Excl Criterion Short Name,,text,16,IETESTCD,Assigned,TOPIC,
+TI,IETEST,Inclusion/Exclusion Criterion,,text,166,IETEST,"CRF Pages 1, 2, 3, 4, 5, 6",SYNONYM QUALIFIER,
+TI,IECAT,Inclusion/Exclusion Category,,text,9,IECAT,Assigned,GROUPING QUALIFIER,
+TI,TIRL,Inclusion/Exclusion Criterion Rule,,text,40,,Assigned,RULE,"TIRL= "" """
+TS,STUDYID,Study Identifier,,text,12,,CRF Page 7,IDENTIFIER,
+TS,DOMAIN,Domain Abbreviation,,text,2,,Assigned,IDENTIFIER,
+TS,TSSEQ,Sequence Number,,integer,8,,Derived,IDENTIFIER,Sequential number identifying records within each TSPARMCD
+TS,TSPARMCD,Trial Summary Parameter Short Name,,text,200,,Assigned,TOPIC,
+TS,TSPARM,Trial Summary Parameter,,text,200,,Protocol,SYNONYM QUALIFIER,
+TS,TSVAL,Parameter Value,,text,200,,Protocol,RESULT QUALIFIER,
+TV,STUDYID,Study Identifier,,text,12,,CRF Page 7,IDENTIFIER,
+TV,DOMAIN,Domain Abbreviation,,text,2,,Assigned,IDENTIFIER,
+TV,VISITNUM,Visit Number,,float,8,VISITNUM,Protocol,TOPIC,
+TV,VISIT,Visit Name,,text,90,VISIT,Protocol,SYNONYM QUALIFIER,
+TV,VISITDY,Planned Study Day of Visit,,integer,8,,Protocol,TIMING,
+TV,ARMCD,Planned Arm Code,,text,8,ARMCD,Protocol,RECORD QUALIFIER,
+TV,ARM,Description of Planned Arm,,text,20,ARM,Protocol,SYNONYM QUALIFIER,
+TV,TVSTRL,Visit Start Rule,,text,200,,Protocol,RULE,
+TV,TVENRL,Visit End Rule,,text,200,,Protocol,RULE,
+DM,STUDYID,Study Identifier,,text,12,,CRF Page 7,IDENTIFIER,
+DM,DOMAIN,Domain Abbreviation,,text,2,,Assigned,IDENTIFIER,
+DM,USUBJID,Unique Subject Identifier,,text,11,,Derived,IDENTIFIER,"Concatenation of STUDYID, DM.SITEID and DM.SUBJID"
+DM,SUBJID,Subject Identifier for the Study,,text,4,,CRF Page 7,TOPIC,
+DM,RFSTDTC,Subject Reference Start Date/Time,,date,10,ISO8601,Derived,RECORD QUALIFIER,Date/time of first study drug treatment derived from EX
+DM,RFENDTC,Subject Reference End Date/Time,,date,10,ISO8601,Derived,RECORD QUALIFIER,Date/time of last study drug treatment derived from EX
+DM,RFXSTDTC,Date/Time of First Study Treatment,,datetime,20,ISO8601,Derived,RECORD QUALIFIER,RFXSTDTC=RFSTDTC
+DM,RFXENDTC,Date/Time of Last Study Treatment,,datetime,20,ISO8601,Derived,RECORD QUALIFIER,RFXENDTC=RFENDTC
+DM,RFICDTC,Date/Time of Informed Consent,,datetime,20,ISO8601,Derived,RECORD QUALIFIER,Date of informed consent was not entered in database (see annotated CRF)
+DM,RFPENDTC,Date/Time of End of Participation,,datetime,20,ISO8601,Derived,RECORD QUALIFIER,DSSTDTC of last disposition event
+DM,DTHDTC,Date/Time of Death,,datetime,20,ISO8601,Derived,RECORD QUALIFIER,"If DS record exists with DSDECOD=""DEATH"" then DTHDTC=AEENDTC."
+DM,DTHFL,Subject Death Flag,,text,1,Y_BLANK,Derived,RECORD QUALIFIER,"If DS record exists with DSDECOD=""DEATH"" then DEATHFL=Y."
+DM,SITEID,Study Site Identifier,,text,3,,Assigned,RECORD QUALIFIER,
+DM,AGE,Age,,integer,8,,Derived,RECORD QUALIFIER,Subject's Age at start of study drug (RFSTDTC).
+DM,AGEU,Age Units,,text,6,AGEU,Assigned,VARIABLE QUALIFIER,"AGEU=""YEARS"""
+DM,SEX,Sex,,text,1,SEX,CRF Page 7,RECORD QUALIFIER,
+DM,RACE,Race,,text,78,RACE,CRF Page 7,RECORD QUALIFIER,
+DM,ETHNIC,Ethnicity,,text,25,ETHNIC,Derived,RECORD QUALIFIER,"Derived from Origin entered on CRF: ETHINC=""HISPANIC OR LATINO"" if Origin=""Hispanic"". Otherwise ETHNIC=""NOT HISPANIC OR LATINO"""
+DM,ARMCD,Planned Arm Code,,text,8,ARMCD,Assigned,RECORD QUALIFIER,According to randomization list
+DM,ARM,Description of Planned Arm,,text,20,ARM,Assigned,SYNONYM QUALIFIER,According to randomization list
+DM,ACTARMCD,Actual Arm Code,,text,8,ARMCD,Derived,RECORD QUALIFIER,Derived from EX
+DM,ACTARM,Description of Actual Arm,,text,20,ARM,Derived,SYNONYM QUALIFIER,Derived from EX
+DM,COUNTRY,Country,,text,3,COUNTRY,Derived,RECORD QUALIFIER,Derived from site information
+DM,DMDTC,Date/Time of Collection,,date,10,ISO8601,CRF Page 7,TIMING,
+DM,DMDY,Study Day of Collection,,integer,8,,Derived,TIMING,See Derivation: COMPMETHOD.STUDY_DAY
+SE,STUDYID,Study Identifier,,text,12,,CRF Page 7,IDENTIFIER,
+SE,DOMAIN,Domain Abbreviation,,text,2,,Assigned,IDENTIFIER,
+SE,USUBJID,Unique Subject Identifier,,text,11,,Derived,IDENTIFIER,"Concatenation of STUDYID, DM.SITEID and DM.SUBJID"
+SE,SESEQ,Sequence Number,,integer,8,,Derived,IDENTIFIER,Sequential number identifying records within each USUBJID
+SE,ETCD,Element Code,,text,200,ETCD,Assigned,TOPIC,
+SE,ELEMENT,Description of Element,,text,200,ELEMENT,Protocol,SYNONYM QUALIFIER,
+SE,SESTDTC,Start Date/Time of Element,,date,10,ISO8601,Derived,TIMING,Earliest date/time when data pertaining to that element were collected
+SE,SEENDTC,End Date/Time of Element,,date,10,ISO8601,Derived,TIMING,Last date/time when data pertaining to that element were collected
+SE,SEUPDES,Description of Unplanned Element,,text,200,,Assigned,SYNONYM QUALIFIER,
+SV,STUDYID,Study Identifier,,text,12,,CRF Page 7,IDENTIFIER,
+SV,DOMAIN,Domain Abbreviation,,text,2,,Assigned,IDENTIFIER,
+SV,USUBJID,Unique Subject Identifier,,text,11,,Derived,IDENTIFIER,"Concatenation of STUDYID, DM.SITEID and DM.SUBJID"
+SV,VISITNUM,Visit Number,,float,8,VISITNUM,"CRF Pages 7, 22, 25, 32, 36, 42, 49, 52, 58, 67, 73, 82, 88, 90, 99, 108, 116, 121,122, 123, 123, 125, 126, 128",TOPIC,
+SV,VISIT,Visit Name,,text,19,VISIT,"CRF Pages 7, 22, 25, 32, 36, 42, 49, 52, 58, 67, 73, 82, 88, 90, 99, 108, 116, 121,122, 123, 123, 125, 126, 128",SYNONYM QUALIFIER,
+SV,VISITDY,Planned Study Day of Visit,,integer,8,,Derived,TIMING,TV.VISITDY
+SV,SVSTDTC,Start Date/Time of Visit,,date,10,ISO8601,Derived,TIMING,Earliest date when data were collected for the corresponding visit.
+SV,SVENDTC,End Date/Time of Visit,,date,10,ISO8601,Derived,TIMING,Lastt date when data were collected for the corresponding visit.
+CM,STUDYID,Study Identifier,,text,12,,CRF Page 7,IDENTIFIER,
+CM,DOMAIN,Domain Abbreviation,,text,2,,Assigned,IDENTIFIER,
+CM,USUBJID,Unique Subject Identifier,,text,11,,Derived,IDENTIFIER,"Concatenation of STUDYID, DM.SITEID and DM.SUBJID"
+CM,CMSEQ,Sequence Number,,integer,8,,Derived,IDENTIFIER,Sequential number identifying records within each USUBJID
+CM,CMSPID,Sponsor-Defined Identifier,,text,2,,Assigned,IDENTIFIER,
+CM,CMTRT,"Reported Name of Drug, Med, or Therapy",,text,44,,"CRF Page 124, 125, 126",TOPIC,
+CM,CMDECOD,Standardized Medication Name,,text,24,DRUG DICTIONARY,Assigned,SYNONYM QUALIFIER,
+CM,CMINDC,Indication,,text,34,,"CRF Page 124, 125, 126",RECORD QUALIFIER,
+CM,CMCLAS,Medication Class,,text,42,DRUG DICTIONARY,Assigned,VARIABLE QUALIFIER,ATC Level 1
+CM,CMDOSE,Dose per Administration,,integer,8,,"CRF Page 124, 125, 126",RECORD QUALIFIER,
+CM,CMDOSU,Dose Units,,text,17,,"CRF Page 124, 125, 126",VARIABLE QUALIFIER,
+CM,CMDOSFRQ,Dosing Frequency per Interval,,text,15,CMFREQ,"CRF Page 124, 125, 126",VARIABLE QUALIFIER,
+CM,CMROUTE,Route of Administration,,text,200,CMROUTE,"CRF Page 124, 125, 126",VARIABLE QUALIFIER,
+CM,VISITNUM,Visit Number,,float,8,VISITNUM,"CRF Page 124, 125, 126",TIMING,
+CM,VISIT,Visit Name,,text,19,VISIT,"CRF Page 124, 125, 126",TIMING,
+CM,VISITDY,Planned Study Day of Visit,,integer,8,,Derived,TIMING,TV.VISITDY
+CM,CMDTC,Date/Time of Collection,,date,10,ISO8601,"CRF Page 124, 125, 126",TIMING,
+CM,CMSTDTC,Start Date/Time of Medication,,date,10,ISO8601,"CRF Page 124, 125, 126",TIMING,
+CM,CMENDTC,End Date/Time of Medication,,date,10,ISO8601,"CRF Page 124, 125, 126",TIMING,
+CM,CMSTDY,Study Day of Start of Medication,,integer,8,,Derived,TIMING,See Derivation: COMPMETHOD.STUDY_DAY
+CM,CMENDY,Study Day of End of Medication,,integer,8,,Derived,TIMING,See Derivation: COMPMETHOD.STUDY_DAY
+EX,STUDYID,Study Identifier,,text,12,,CRF Page 7,IDENTIFIER,
+EX,DOMAIN,Domain Abbreviation,,text,2,,Assigned,IDENTIFIER,
+EX,USUBJID,Unique Subject Identifier,,text,11,,Derived,IDENTIFIER,"Concatenation of STUDYID, DM.SITEID and DM.SUBJID"
+EX,EXSEQ,Sequence Number,,integer,8,,Derived,IDENTIFIER,Sequential number identifying records within each USUBJID
+EX,EXTRT,Name of Actual Treatment,,text,10,EXTRT,eDT,TOPIC,
+EX,EXDOSE,Dose per Administration,,integer,8,,eDT,RECORD QUALIFIER,
+EX,EXDOSU,Dose Units,,text,2,EXDOSEU,eDT,VARIABLE QUALIFIER,
+EX,EXDOSFRM,Dose Form,,text,5,EXDOSFRM,eDT,RECORD QUALIFIER,
+EX,EXDOSFRQ,Dosing Frequency per Interval,,text,2,EXFREQ,eDT,VARIABLE QUALIFIER,
+EX,EXROUTE,Route of Administration,,text,11,EXROUTE,eDT,VARIABLE QUALIFIER,
+EX,VISITNUM,Visit Number,,float,8,VISITNUM,"CRF Pages 25, 36, 42, 49, 52, 58, 67, 73, 82, 90, 99, 108,116, 128",TIMING,
+EX,VISIT,Visit Name,,text,19,VISIT,"CRF Pages 25, 36, 42, 49, 52, 58, 67, 73, 82, 90, 99, 108,116, 128",TIMING,
+EX,VISITDY,Planned Study Day of Visit,,integer,8,,Derived,TIMING,TV.VISITDY
+EX,EXSTDTC,Start Date/Time of Treatment,,date,10,ISO8601,"CRF Pages 25, 36, 42, 49, 52, 58, 67, 73, 82, 90, 99, 108,116, 128",TIMING,
+EX,EXENDTC,End Date/Time of Treatment,,date,10,ISO8601,"CRF Page 105, 138",TIMING,
+EX,EXSTDY,Study Day of Start of Treatment,,integer,8,,Derived,TIMING,See Derivation: COMPMETHOD.STUDY_DAY
+EX,EXENDY,Study Day of End of Treatment,,integer,8,,Derived,TIMING,See Derivation: COMPMETHOD.STUDY_DAY
+AE,STUDYID,Study Identifier,,text,12,,CRF Page 7,IDENTIFIER,
+AE,DOMAIN,Domain Abbreviation,,text,2,,Assigned,IDENTIFIER,
+AE,USUBJID,Unique Subject Identifier,,text,11,,Derived,IDENTIFIER,"Concatenation of STUDYID, DM.SITEID and DM.SUBJID"
+AE,AESEQ,Sequence Number,,integer,8,,Derived,IDENTIFIER,Sequential number identifying records within each USUBJID
+AE,AESPID,Sponsor-Defined Identifier,,text,3,,"CRF Page 121, 122,123",IDENTIFIER,
+AE,AETERM,Reported Term for the Adverse Event,,text,200,,"CRF Page 121, 122,123",TOPIC,
+AE,AELLT,Lowest Level Term,,text,100,ADVERSE EVENT DICTIONARY,Assigned,VARIABLE QUALIFIER,
+AE,AELLTCD,Lowest Level Term Code,,integer,8,,Assigned,VARIABLE QUALIFIER,
+AE,AEDECOD,Dictionary-Derived Term,,text,200,ADVERSE EVENT DICTIONARY,Assigned,SYNONYM QUALIFIER,
+AE,AEPTCD,Preferred Term Code,,integer,8,,Assigned,VARIABLE QUALIFIER,
+AE,AEHLT,High Level Term,,text,100,ADVERSE EVENT DICTIONARY,Assigned,VARIABLE QUALIFIER,
+AE,AEHLTCD,High Level Term Code,,integer,8,,Assigned,VARIABLE QUALIFIER,
+AE,AEHLGT,High Level Group Term,,text,100,ADVERSE EVENT DICTIONARY,Assigned,VARIABLE QUALIFIER,
+AE,AEHLGTCD,High Level Group Term Code,,integer,8,,Assigned,VARIABLE QUALIFIER,
+AE,AEBODSYS,Body System or Organ Class,,text,67,ADVERSE EVENT DICTIONARY,Assigned,VARIABLE QUALIFIER,
+AE,AEBDSYCD,Body System or Organ Class Code,,integer,8,,Assigned,VARIABLE QUALIFIER,
+AE,AESOC,Primary System Organ Class,,text,100,ADVERSE EVENT DICTIONARY,Assigned,VARIABLE QUALIFIER,
+AE,AESOCCD,Primary System Organ Class Code,,integer,8,,Assigned,VARIABLE QUALIFIER,
+AE,AESEV,Severity/Intensity,,text,8,SEV,"CRF Page 121, 122,123",VARIABLE QUALIFIER,
+AE,AESER,Serious Event,,text,1,YN,"CRF Page 121, 122,123",RECORD QUALIFIER,
+AE,AEACN,Action Taken with Study Treatment,,text,30,,Derived,RECORD QUALIFIER,AEACN=Null (data on action taken concerning study treatment was not collected)
+AE,AEREL,Causality,,text,8,AECAUS,"CRF Page 121, 122,123",RECORD QUALIFIER,
+AE,AEOUT,Outcome of Adverse Event,,text,200,OUT,"CRF Page 121, 122,123",RECORD QUALIFIER,
+AE,AESCAN,Involves Cancer,,text,1,YN,"CRF Page 121, 122,123",RECORD QUALIFIER,
+AE,AESCONG,Congenital Anomaly or Birth Defect,,text,1,YN,"CRF Page 121, 122,123",RECORD QUALIFIER,
+AE,AESDISAB,Persist or Signif Disability/Incapacity,,text,1,YN,"CRF Page 121, 122,123",RECORD QUALIFIER,
+AE,AESDTH,Results in Death,,text,1,YN,"CRF Page 121, 122,123",RECORD QUALIFIER,
+AE,AESHOSP,Requires or Prolongs Hospitalization,,text,1,YN,"CRF Page 121, 122,123",RECORD QUALIFIER,
+AE,AESLIFE,Is Life Threatening,,text,1,YN,"CRF Page 121, 122,123",RECORD QUALIFIER,
+AE,AESOD,Occurred with Overdose,,text,1,YN,"CRF Page 121, 122,123",RECORD QUALIFIER,
+AE,AEDTC,Date/Time of Collection,,date,10,ISO8601,Derived,TIMING,Date of final visit (SV)
+AE,AESTDTC,Start Date/Time of Adverse Event,,date,10,ISO8601,"CRF Page 121, 122,123",TIMING,
+AE,AEENDTC,End Date/Time of Adverse Event,,date,10,ISO8601,"CRF Page 121, 122,123",TIMING,
+AE,AESTDY,Study Day of Start of Adverse Event,,integer,8,,Derived,TIMING,See Derivation: COMPMETHOD.STUDY_DAY
+AE,AEENDY,Study Day of End of Adverse Event,,integer,8,,Derived,TIMING,See Derivation: COMPMETHOD.STUDY_DAY
+DS,STUDYID,Study Identifier,,text,12,,CRF Page 7,IDENTIFIER,
+DS,DOMAIN,Domain Abbreviation,,text,2,,Assigned,IDENTIFIER,
+DS,USUBJID,Unique Subject Identifier,,text,11,,Derived,IDENTIFIER,"Concatenation of STUDYID, DM.SITEID and DM.SUBJID"
+DS,DSSEQ,Sequence Number,,integer,8,,Derived,IDENTIFIER,Sequential number identifying records within each USUBJID
+DS,DSSPID,Sponsor-Defined Identifier,,text,2,,Assigned,IDENTIFIER,
+DS,DSTERM,Reported Term for the Disposition Event,,text,63,,"CRF Page 106, 139",TOPIC,
+DS,DSDECOD,Standardized Disposition Term,,text,63,DISCCD,"CRF Page 106, 139",SYNONYM QUALIFIER,
+DS,DSCAT,Category for Disposition Event,,text,17,DSCAT,Assigned,GROUPING QUALIFIER,
+DS,VISITNUM,Visit Number,,float,8,VISITNUM,"CRF Page 106, 139",TIMING,
+DS,VISIT,Visit Name,,text,19,VISIT,"CRF Page 106, 139",TIMING,
+DS,DSDTC,Date/Time of Collection,,datetime,19,ISO8601,"CRF Page 106, 139",TIMING,
+DS,DSSTDTC,Start Date/Time of Disposition Event,,date,10,ISO8601,"CRF Page 106, 139",TIMING,
+DS,DSSTDY,Study Day of Start of Disposition Event,,integer,8,,Derived,TIMING,See Derivation: COMPMETHOD.STUDY_DAY
+MH,STUDYID,Study Identifier,,text,12,,CRF Page 7,IDENTIFIER,
+MH,DOMAIN,Domain Abbreviation,,text,2,,Assigned,IDENTIFIER,
+MH,USUBJID,Unique Subject Identifier,,text,11,,Derived,IDENTIFIER,"Concatenation of STUDYID, DM.SITEID and DM.SUBJID"
+MH,MHSEQ,Sequence Number,,integer,8,,Derived,IDENTIFIER,Sequential number identifying records within each USUBJID
+MH,MHSPID,Sponsor-Defined Identifier,,text,3,,"CRF Pages 14, 15, 121,122, 123",IDENTIFIER,
+MH,MHTERM,Reported Term for the Medical History,,text,19,,"CRF Pages 14, 15, 121,122, 123",TOPIC,
+MH,MHLLT,Lowest Level Term,,text,200,MEDICAL HISTORY DICTIONARY,Assigned,VARIABLE QUALIFIER,
+MH,MHDECOD,Dictionary-Derived Term,,text,44,MEDICAL HISTORY DICTIONARY,Assigned,SYNONYM QUALIFIER,
+MH,MHHLT,High Level Term,,text,200,MEDICAL HISTORY DICTIONARY,Assigned,VARIABLE QUALIFIER,
+MH,MHHLGT,High Level Group Term,,text,200,MEDICAL HISTORY DICTIONARY,Assigned,VARIABLE QUALIFIER,
+MH,MHCAT,Category for Medical History,,text,34,MHCAT,Assigned,GROUPING QUALIFIER,Category values are assigned according to the CRF Section label wich was used to collect that type of medical history information.
+MH,MHBODSYS,Body System or Organ Class,,text,67,MEDICAL HISTORY DICTIONARY,Assigned,RECORD QUALIFIER,
+MH,MHSEV,Severity/Intensity,,text,8,SEV,"CRF Pages 121, 122,123",VARIABLE QUALIFIER,
+MH,VISITNUM,Visit Number,,float,8,VISITNUM,"CRF Pages 14, 15, 121,122, 123",TIMING,
+MH,VISIT,Visit Name,,text,19,VISIT,"CRF Pages 14, 15, 121,122, 123",TIMING,
+MH,VISITDY,Planned Study Day of Visit,,integer,8,,Derived,TIMING,TV.VISITDY
+MH,MHDTC,Date/Time of History Collection,,date,10,ISO8601,"CRF Pages 14, 15, 121,122, 123",TIMING,
+MH,MHSTDTC,Start Date/Time of Medical History Event,,date,10,ISO8601,"CRF Pages 12, 14",TIMING,
+MH,MHDY,Study Day of History Collection,,integer,8,,Derived,TIMING,See Derivation: COMPMETHOD.STUDY_DAY
+LB,STUDYID,Study Identifier,,text,12,,CRF Page 7,IDENTIFIER,
+LB,DOMAIN,Domain Abbreviation,,text,2,,Assigned,IDENTIFIER,
+LB,USUBJID,Unique Subject Identifier,,text,11,,Derived,IDENTIFIER,"Concatenation of STUDYID, DM.SITEID and DM.SUBJID"
+LB,LBSEQ,Sequence Number,,integer,8,,Derived,IDENTIFIER,Sequential number identifying records within each USUBJID
+LB,LBTESTCD,Lab Test or Examination Short Name,,text,7,,eDT,TOPIC,
+LB,LBTEST,Lab Test or Examination Name,,text,200,,eDT,SYNONYM QUALIFIER,
+LB,LBCAT,Category for Lab Test,,text,10,LBCAT,eDT,GROUPING QUALIFIER,
+LB,LBORRES,Result or Finding in Original Units,,text,5,,eDT,RESULT QUALIFIER,
+LB,LBORRESU,Original Units,,text,8,,eDT,VARIABLE QUALIFIER,
+LB,LBORNRLO,Reference Range Lower Limit in Orig Unit,,text,5,,eDT,VARIABLE QUALIFIER,
+LB,LBORNRHI,Reference Range Upper Limit in Orig Unit,,text,7,,eDT,VARIABLE QUALIFIER,
+LB,LBSTRESC,Character Result/Finding in Std Format,,text,8,,Derived,RESULT QUALIFIER,LBORRES converted to standard unit (LBSTRESU)
+LB,LBSTRESN,Numeric Result/Finding in Standard Units,,integer,8,,Derived,RESULT QUALIFIER,LBSTRESC converted to numeric
+LB,LBSTRESU,Standard Units,,text,8,LBUNIT,Assigned,VARIABLE QUALIFIER,Standard unit per parameter assigned for summarizing analyses
+LB,LBSTNRLO,Reference Range Lower Limit-Std Units,,integer,8,,Derived,VARIABLE QUALIFIER,LBORNRLO converted to standard unit (LBSTRESU)
+LB,LBSTNRHI,Reference Range Upper Limit-Std Units,,integer,8,,Derived,VARIABLE QUALIFIER,LBORNRHI converted to standard unit (LBSTRESU)
+LB,LBNRIND,Reference Range Indicator,,text,200,LBNRIND,Derived,VARIABLE QUALIFIER,"If LBSTRESN > LBSTNRHI then LBNRIND=""HIGH"". If LBSTRESN < LBSTNRLO then LBNRIND=""LOW"". If LBSTRESN between LBSTNRLO and LBSTNRHI then LBNRIND=""NORMAL"". Selected urinalysis parameters (e.g. Ketones) are classified as NORMAL or ABNORMAL only."
+LB,LBBLFL,Baseline Flag,,text,1,Y_BLANK,Derived,RECORD QUALIFIER,"If VISIT=""SCREENING"" then LBBLFL=Y"
+LB,VISITNUM,Visit Number,,float,8,VISITNUM,eDT,TIMING,
+LB,VISIT,Visit Name,,text,19,VISIT,eDT,TIMING,
+LB,VISITDY,Planned Study Day of Visit,,integer,8,,Derived,TIMING,TV.VISITDY
+LB,LBDTC,Date/Time of Specimen Collection,,datetime,16,ISO8601,eDT,TIMING,
+LB,LBDY,Study Day of Specimen Collection,,integer,8,,Derived,TIMING,See Derivation: COMPMETHOD.STUDY_DAY
+QS,STUDYID,Study Identifier,,text,12,,CRF Page 7,IDENTIFIER,
+QS,DOMAIN,Domain Abbreviation,,text,2,,Assigned,IDENTIFIER,
+QS,USUBJID,Unique Subject Identifier,,text,11,,Derived,IDENTIFIER,"Concatenation of STUDYID, DM.SITEID and DM.SUBJID"
+QS,QSSEQ,Sequence Number,,integer,8,,Derived,IDENTIFIER,Sequential number identifying records within each USUBJID
+QS,QSTESTCD,Question Short Name,,text,8,,"CRF Pages 10, 11, 26, 27, 28, 29, 38, 44, 54, 59, 60, 61, 62, 63, 69, 74, 75, 76, 77, 78, 84,89, 91, 92, 93, 94, 95, 101, 109, 110, 111, 112, 113, 130, 131, 132, 133, 134, 156, 157",TOPIC,
+QS,QSTEST,Question Name,,text,40,,"CRF Pages 10, 11, 26, 27, 28, 29, 38, 44, 54, 59, 60, 61, 62, 63, 69, 74, 75, 76, 77, 78, 84,89, 91, 92, 93, 94, 95, 101, 109, 110, 111, 112, 113, 130, 131, 132, 133, 134, 156, 157",SYNONYM QUALIFIER,
+QS,QSCAT,Category of Question,,text,70,QSCAT,"CRF Pages 10, 11, 26, 27, 28, 29, 38, 44, 54, 59, 60, 61, 62, 63, 69, 74, 75, 76, 77, 78, 84,89, 91, 92, 93, 94, 95, 101, 109, 110, 111, 112, 113, 130, 131, 132, 133, 134, 156, 157",GROUPING QUALIFIER,
+QS,QSSCAT,Subcategory for Question,,text,26,,"CRF Pages 10, 11, 26, 27, 28, 29, 38, 44, 54, 59, 60, 61, 62, 63, 69, 74, 75, 76, 77, 78, 84,89, 91, 92, 93, 94, 95, 101, 109, 110, 111, 112, 113, 130, 131, 132, 133, 134, 156, 157",GROUPING QUALIFIER,
+QS,QSORRES,Finding in Original Units,,text,20,,"CRF Pages 10, 11, 26, 27, 28, 29, 38, 44, 54, 59, 60, 61, 62, 63, 69, 74, 75, 76, 77, 78, 84,89, 91, 92, 93, 94, 95, 101, 109, 110, 111, 112, 113, 130, 131, 132, 133, 134, 156, 157",RESULT QUALIFIER,
+QS,QSORRESU,Original Units,,text,7,QSUNIT,"CRF Pages 26, 59, 74, 91, 109, 130",VARIABLE QUALIFIER,
+QS,QSSTRESC,Character Result/Finding in Std Format,,text,4,,Derived,RESULT QUALIFIER,Derived standardized value for collect result (QSORRES)
+QS,QSSTRESN,Numeric Finding in Standard Units,,integer,8,,Derived,RESULT QUALIFIER,See Derivation: COMPMETHOD.QSAD_QSSTRESN
+QS,QSSTRESU,Standard Units,,text,7,QSUNIT,Derived,VARIABLE QUALIFIER,QSSTRESU=QSORRESU
+QS,QSBLFL,Baseline Flag,,text,1,Y_BLANK,Derived,RECORD QUALIFIER,"If VISIT=""BASELINE"" then QSBLFL=""Y"""
+QS,QSDRVFL,Derived Flag,,text,1,Y_BLANK,Assigned,RECORD QUALIFIER,"Individual test results which were not collected on CRF but derived are flagged with QSDRVFL=""Y"""
+QS,VISITNUM,Visit Number,,float,8,VISITNUM,"CRF Pages 10, 11, 26, 27, 28, 29, 38, 44, 54, 59, 60, 61, 62, 63, 69, 74, 75, 76, 77, 78, 84,89, 91, 92, 93, 94, 95, 101, 109, 110, 111, 112, 113, 130, 131, 132, 133, 134, 156, 157",TIMING,
+QS,VISIT,Visit Name,,text,19,VISIT,"CRF Pages 10, 11, 26, 27, 28, 29, 38, 44, 54, 59, 60, 61, 62, 63, 69, 74, 75, 76, 77, 78, 84,89, 91, 92, 93, 94, 95, 101, 109, 110, 111, 112, 113, 130, 131, 132, 133, 134, 156, 157",TIMING,
+QS,VISITDY,Planned Study Day of Visit,,integer,8,,Derived,TIMING,TV.VISITDY
+QS,QSDTC,Date/Time of Finding,,date,10,ISO8601,Derived,TIMING,QSDTC=SV.SVSTDTC of the respective VISIT
+QS,QSDY,Study Day of Finding,,integer,8,,Derived,TIMING,See Derivation: COMPMETHOD.STUDY_DAY
+SC,STUDYID,Study Identifier,,text,12,,CRF Page 7,IDENTIFIER,
+SC,DOMAIN,Domain Abbreviation,,text,2,,Assigned,IDENTIFIER,
+SC,USUBJID,Unique Subject Identifier,,text,11,,Derived,IDENTIFIER,"Concatenation of STUDYID, DM.SITEID and DM.SUBJID"
+SC,SCSEQ,Sequence Number,,integer,8,,Derived,IDENTIFIER,Sequential number identifying records within each USUBJID
+SC,SCTESTCD,Subject Characteristic Short Name,,text,8,,CRF Page 8,TOPIC,
+SC,SCTEST,Subject Characteristic,,text,18,,CRF Page 8,SYNONYM QUALIFIER,
+SC,SCCAT,Category for Subject Characteristic,,text,9,SCCAT,Assigned,GROUPING QUALIFIER,Corresponds to the CRF Section label where the data were obtained from.
+SC,SCORRES,Result or Finding in Original Units,,text,2,,CRF Page 8,RESULT QUALIFIER,
+SC,SCORRESU,Original Units,,text,5,SCUNIT,CRF Page 8,VARIABLE QUALIFIER,
+SC,SCSTRESC,Character Result/Finding in Std Format,,text,2,,Derived,RESULT QUALIFIER,SCORRES converted to standard unit
+SC,SCSTRESN,Numeric Result/Finding in Standard Units,,integer,8,,Derived,RESULT QUALIFIER,SCSTRESC converted to numeric
+SC,SCSTRESU,Standard Units,,text,5,SCUNIT,Derived,VARIABLE QUALIFIER,SCSTRESU=SCORRESU
+SC,SCDTC,Date/Time of Collection,,date,10,ISO8601,CRF Page 7,TIMING,
+SC,SCDY,Study Day of Examination,,integer,8,,Derived,TIMING,See Derivation: COMPMETHOD.STUDY_DAY
+VS,STUDYID,Study Identifier,,text,12,,CRF Page 7,IDENTIFIER,
+VS,DOMAIN,Domain Abbreviation,,text,2,,Assigned,IDENTIFIER,
+VS,USUBJID,Unique Subject Identifier,,text,11,,Derived,IDENTIFIER,"Concatenation of STUDYID, DM.SITEID and DM.SUBJID"
+VS,VSSEQ,Sequence Number,,integer,8,,Derived,IDENTIFIER,Sequential number identifying records within each USUBJID
+VS,VSTESTCD,Vital Signs Test Short Name,,text,6,,"CRF Pages 16, 17, 22, 23, 30, 33, 39, 45, 50, 55, 64, 70, 79, 85,96, 102, 114, 135",TOPIC,
+VS,VSTEST,Vital Signs Test Name,,text,24,,"CRF Pages 16, 17, 22, 23, 30, 33, 39, 45, 50, 55, 64, 70, 79, 85,96, 102, 114, 135",SYNONYM QUALIFIER,
+VS,VSPOS,Vital Signs Position of Subject,,text,8,VSPOS,"CRF Pages 16, 17, 22, 23, 30, 33, 39, 45, 50, 55, 64, 70, 79, 85,96, 102, 114, 135",RECORD QUALIFIER,
+VS,VSORRES,Result or Finding in Original Units,,text,5,,"CRF Pages 16, 17, 22, 23, 30, 33, 39, 45, 50, 55, 64, 70, 79, 85,96, 102, 114, 135",RESULT QUALIFIER,
+VS,VSORRESU,Original Units,,text,200,VSUNIT,"CRF Pages 16, 17, 22, 23, 30, 33, 39, 45, 50, 55, 64, 70, 79, 85,96, 102, 114, 135",VARIABLE QUALIFIER,
+VS,VSSTRESC,Character Result/Finding in Std Format,,text,6,,Derived,RESULT QUALIFIER,VSORRES converted to standard unit
+VS,VSSTRESN,Numeric Result/Finding in Standard Units,,integer,8,,Derived,RESULT QUALIFIER,VSSTRESC converted to numeric
+VS,VSSTRESU,Standard Units,,text,200,VSUNIT,Assigned,VARIABLE QUALIFIER,Standard unit defined per parameter for summarizing analysis
+VS,VSSTAT,Completion Status,,text,8,ND,"CRF Pages 16, 17, 22, 23, 30, 33, 39, 45, 50, 55, 64, 70, 79, 85,96, 102, 114, 135",RECORD QUALIFIER,
+VS,VSLOC,Location of Vital Signs Measurement,,text,200,VSLOC,"CRF Pages 17, 23, 30, 33, 45, 50, 55, 64, 70, 79, 85, 96, 102,114, 135",RECORD QUALIFIER,
+VS,VSBLFL,Baseline Flag,,text,1,Y_BLANK,Derived,RECORD QUALIFIER,"If VISIT=""BASELINE"" then VSBLFL=""Y"""
+VS,VISITNUM,Visit Number,,float,8,VISITNUM,"CRF Pages 16, 17, 22, 23, 30, 33, 39, 45, 50, 55, 64, 70, 79, 85,96, 102, 114, 135",TIMING,
+VS,VISIT,Visit Name,,text,19,VISIT,"CRF Pages 16, 17, 22, 23, 30, 33, 39, 45, 50, 55, 64, 70, 79, 85,96, 102, 114, 135",TIMING,
+VS,VISITDY,Planned Study Day of Visit,,integer,8,,Derived,TIMING,TV.VISITDY
+VS,VSDTC,Date/Time of Measurements,,date,10,ISO8601,"CRF Pages 16, 17, 22, 23, 30, 33, 39, 45, 50, 55, 64, 70, 79, 85,96, 102, 114, 135",TIMING,
+VS,VSDY,Study Day of Vital Signs,,integer,8,,Derived,TIMING,See Derivation: COMPMETHOD.STUDY_DAY
+VS,VSTPT,Planned Time Point Name,,text,30,VSTPT,"CRF Pages 16, 17, 22, 23, 30, 33, 39, 45, 50, 55, 64, 70, 79, 85,96, 102, 114, 135",TIMING,
+VS,VSTPTNUM,Planned Time Point Number,,integer,8,VSTPTNUM,"CRF Pages 16, 17, 22, 23, 30, 33, 39, 45, 50, 55, 64, 70, 79, 85,96, 102, 114, 135",TIMING,
+VS,VSELTM,Planned Elapsed Time from Time Point Ref,,text,4,,Derived,TIMING,VSTPT expressed in the ISO 8601 format for durations
+VS,VSTPTREF,Time Point Reference,,text,16,VSTPTREF,Assigned,TIMING,
+RELREC,STUDYID,Study Identifier,,text,12,,CRF Page7,IDENTIFIER,
+RELREC,RDOMAIN,Related Domain Abbreviation,,text,2,,Derived,IDENTIFIER,Domain abbreviations for domains which are related to at least one other domain. Derived from parent record
+RELREC,USUBJID,Unique Subject Identifier,,text,11,,Derived,IDENTIFIER,"Concatenation of STUDYID, DM.SITEID and DM.SUBJID"
+RELREC,IDVAR,Identifying Variable,,text,8,,Derived,IDENTIFIER,Derived from parent record
+RELREC,IDVARVAL,Identifying Variable Value,,text,200,,Derived,IDENTIFIER,Derived from parent record
+RELREC,RELTYPE,Relationship Type,,text,30,,Assigned,RESULT QUALIFIER,
+RELREC,RELID,Relationship Identifier,,text,200,,Derived,TOPIC,Records with the same RELID value can be considered as related records
+SUPPAE,STUDYID,Study Identifier,,text,12,,CRF Page 7,IDENTIFIER,
+SUPPAE,RDOMAIN,Related Domain Abbreviation,,text,2,,Assigned,IDENTIFIER,"RDOMAIN=""AE"""
+SUPPAE,USUBJID,Unique Subject Identifier,,text,11,,Derived,IDENTIFIER,"Concatenation of STUDYID, DM.SITEID and DM.SUBJID"
+SUPPAE,IDVAR,Identifying Variable,,text,8,,Assigned,IDENTIFIER,"IDVAR=""AESEQ"""
+SUPPAE,IDVARVAL,Identifying Variable Value,,text,200,,Derived,IDENTIFIER,Value of AESEQ of corresponding parent record
+SUPPAE,QNAM,Qualifier Variable Name,,text,8,,Assigned,TOPIC,
+SUPPAE,QLABEL,Qualifier Variable Label,,text,40,,Assigned,SYNONYM QUALIFIER,
+SUPPAE,QVAL,Data Value,,text,200,,Derived,RESULT,see value level metadata
+SUPPAE,QORIG,Origin,,text,200,,Assigned,RESULT QUALIFIER,
+SUPPAE,QEVAL,Evaluator,,text,200,QEVAL,Assigned,RESULT QUALIFIER,
+SUPPDM,STUDYID,Study Identifier,,text,12,,CRF Page 7,IDENTIFIER,
+SUPPDM,RDOMAIN,Related Domain Abbreviation,,text,2,,Assigned,IDENTIFIER,"RDOMAIN=""AE"""
+SUPPDM,USUBJID,Unique Subject Identifier,,text,11,,Derived,IDENTIFIER,"Concatenation of STUDYID, DM.SITEID and DM.SUBJID"
+SUPPDM,IDVAR,Identifying Variable,,text,8,,Assigned,IDENTIFIER,"IDVAR="" """
+SUPPDM,IDVARVAL,Identifying Variable Value,,text,200,,Assigned,IDENTIFIER,"IDVARVAL= "" """
+SUPPDM,QNAM,Qualifier Variable Name,,text,8,,Assigned,TOPIC,
+SUPPDM,QLABEL,Qualifier Variable Label,,text,40,,Assigned,SYNONYM QUALIFIER,
+SUPPDM,QVAL,Data Value,,text,200,,Derived,RESULT,see value level metadata
+SUPPDM,QORIG,Origin,,text,200,,Assigned,RESULT QUALIFIER,
+SUPPDM,QEVAL,Evaluator,,text,200,QEVAL,Assigned,RESULT QUALIFIER,
+SUPPDS,STUDYID,Study Identifier,,text,12,,CRF Page 7,IDENTIFIER,
+SUPPDS,RDOMAIN,Related Domain Abbreviation,,text,2,,Assigned,IDENTIFIER,"RDOMAIN=""DS"""
+SUPPDS,USUBJID,Unique Subject Identifier,,text,11,,Derived,IDENTIFIER,"Concatenation of STUDYID, DM.SITEID and DM.SUBJID"
+SUPPDS,IDVAR,Identifying Variable,,text,8,,Assigned,IDENTIFIER,"IDVAR=""DSSEQ"""
+SUPPDS,IDVARVAL,Identifying Variable Value,,text,200,,Derived,IDENTIFIER,Value of DSSEQ of corresponding parent record
+SUPPDS,QNAM,Qualifier Variable Name,,text,8,,Assigned,TOPIC,
+SUPPDS,QLABEL,Qualifier Variable Label,,text,40,,"CRF Pages 106, 139",SYNONYM QUALIFIER,
+SUPPDS,QVAL,Data Value,,text,200,,"CRF Pages 106, 139",RESULT,see value level metadata
+SUPPDS,QORIG,Origin,,text,200,,Assigned,RESULT QUALIFIER,
+SUPPDS,QEVAL,Evaluator,,text,200,QEVAL,Assigned,RESULT QUALIFIER,
+SUPPLB,STUDYID,Study Identifier,,text,12,,CRF Page 7,IDENTIFIER,
+SUPPLB,RDOMAIN,Related Domain Abbreviation,,text,2,,Assigned,IDENTIFIER,"RDOMAIN=""LB"""
+SUPPLB,USUBJID,Unique Subject Identifier,,text,11,,Derived,IDENTIFIER,"Concatenation of STUDYID, DM.SITEID and DM.SUBJID"
+SUPPLB,IDVAR,Identifying Variable,,text,8,,Assigned,IDENTIFIER,"IDVAR=""LBSEQ"""
+SUPPLB,IDVARVAL,Identifying Variable Value,,text,200,,Derived,IDENTIFIER,Value of LBSEQ of corresponding parent record
+SUPPLB,QNAM,Qualifier Variable Name,,text,8,,Assigned,TOPIC,
+SUPPLB,QLABEL,Qualifier Variable Label,,text,40,,Assigned,SYNONYM QUALIFIER,
+SUPPLB,QVAL,Data Value,,text,200,,Derived,RESULT,see value level metadata
+SUPPLB,QORIG,Origin,,text,200,,Assigned,RESULT QUALIFIER,
+SUPPLB,QEVAL,Evaluator,,text,200,QEVAL,Assigned,RESULT QUALIFIER,
