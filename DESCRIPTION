@@ -1,13 +1,13 @@
 Package: safetyData
 Title: Clinical Trial Data
-Description: safetyData contains example CDISC clinical trial data sets formatted for easy use in R.
+Description: Example CDISC clinical trial data sets formatted for easy use in R.
 Version: 1.0.0
 Authors@R: c(
     person(
         given = "Jeremy",
         family = "Wildfire",
         role = c("aut", "cre"),
-        email = "jwildfire@gilead.com"
+        email = "jwildfire@gmail.com"
     ),
     person(
         given = "Renan",
@@ -22,4 +22,4 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Depends: 
-    R (>= 4.0)
+    R (>= 3.0)

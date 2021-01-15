@@ -22,7 +22,7 @@ roxyheaders <- unlist(
             roxy<-c(
                 paste("#' @title", d), 
                 paste("#' @description ADaM", substring(d,6) ,"data frame"), 
-                paste("#' @format a data frame with",dim(df)[1], "rows and", dim(df)[2],"columns. See  \\url{https://https://github.com/SafetyGraphics/safetyData/tree/main/data-raw/adam/README.md} for more details and full data specification"),
+                paste("#' @format a data frame with",dim(df)[1], "rows and", dim(df)[2],"columns. See \\url{https://github.com/SafetyGraphics/safetyData/tree/main/data-raw/adam/README.md} for more details and full data specification"),
                 dQuote(d),
                 "\n"
             )
