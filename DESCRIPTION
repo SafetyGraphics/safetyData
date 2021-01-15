@@ -1,6 +1,6 @@
 Package: safetyData
 Title: Clinical Trial Data
-Description: Example CDISC clinical trial data sets formatted for easy use in R.
+Description: Example clinical trial data sets formatted for easy use in R.
 Version: 1.0.0
 Authors@R: c(
     person(
