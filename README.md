@@ -8,7 +8,9 @@ safetyData is an R package with sample CDISC clinical trial data sets.
 
 # Data Overview
 
-The package reformats PHUSE's sample [AdAM](https://github.com/phuse-org/phuse-scripts/tree/master/data/adam/cdiscpilot01) and [SDTM](https://github.com/phuse-org/phuse-scripts/tree/master/data/sdtm/cdiscpilot01) datasets ([license](https://github.com/phuse-org/phuse-scripts/blob/master/LICENSE.md)) as an R package following R [data best practices](https://r-pkgs.org/data.html).
+The package reformats PHUSE's sample [AdAM](https://github.com/phuse-org/phuse-scripts/tree/master/data/adam/cdiscpilot01) and [SDTM](https://github.com/phuse-org/phuse-scripts/tree/master/data/sdtm/cdiscpilot01) datasets as an R package following R [data best practices](https://r-pkgs.org/data.html).
+
+PHUSE released the data under a permissive [MIT licence](https://github.com/phuse-org/phuse-scripts/blob/master/LICENSE.md), so reuse with attribution is encouraged. The data are especially useful for prototyping new tables, listings and figures and for writing automated tests. 
 
 # Usage
 
@@ -23,3 +25,4 @@ table(safetyData::sdtm_ta$arm)
 
 # Acknowledgements
 
+Thanks to [PHUSE](https://phuse.global/) and it's member organizations for releasing the data. 

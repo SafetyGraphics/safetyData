@@ -24,7 +24,12 @@ for(path in paths){
     # Read csv to data frame   
     assign(
         file, 
-        read.csv(here('data-raw','sdtm',path), stringsAsFactors = FALSE,  na.strings = c("NA",""))
+        read.csv(
+            here('data-raw','sdtm',path), 
+            stringsAsFactors = FALSE,  
+            na.strings = c("NA",""),
+            encoding="latin1"
+        )
     ) 
     
     #save to .RDA to /data 
