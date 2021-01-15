@@ -1,6 +1,6 @@
 #' @title sdtm_ae
 #' @description Adverse Events data frame - One record per adverse event per subject
-#' @format a data frame with 1191 rows and 35 columns:
+#' @format a data frame with 1191 rows and 35 columns. See \url{https://github.com/SafetyGraphics/safetyData/blob/main/data-raw/sdtm/README.md} for more details and full data specification. Columns:
 #' \describe{
 #' \item{\code{ STUDYID }}{ text - Study Identifier }
 #' \item{\code{ DOMAIN }}{ text - Domain Abbreviation }
@@ -43,7 +43,7 @@
 
 #' @title sdtm_cm
 #' @description Concomitant Medications data frame - One record per recorded medication occurrence or constant-dosing interval per subject
-#' @format a data frame with 7510 rows and 21 columns:
+#' @format a data frame with 7510 rows and 21 columns. See \url{https://github.com/SafetyGraphics/safetyData/blob/main/data-raw/sdtm/README.md} for more details and full data specification. Columns:
 #' \describe{
 #' \item{\code{ STUDYID }}{ text - Study Identifier }
 #' \item{\code{ DOMAIN }}{ text - Domain Abbreviation }
@@ -72,7 +72,7 @@
 
 #' @title sdtm_dm
 #' @description Demographics data frame - One record per subject
-#' @format a data frame with 306 rows and 25 columns:
+#' @format a data frame with 306 rows and 25 columns. See \url{https://github.com/SafetyGraphics/safetyData/blob/main/data-raw/sdtm/README.md} for more details and full data specification. Columns:
 #' \describe{
 #' \item{\code{ STUDYID }}{ text - Study Identifier }
 #' \item{\code{ DOMAIN }}{ text - Domain Abbreviation }
@@ -105,7 +105,7 @@
 
 #' @title sdtm_ds
 #' @description Disposition data frame - One record per disposition status or protocol milestone per subject
-#' @format a data frame with 596 rows and 13 columns:
+#' @format a data frame with 596 rows and 13 columns. See \url{https://github.com/SafetyGraphics/safetyData/blob/main/data-raw/sdtm/README.md} for more details and full data specification. Columns:
 #' \describe{
 #' \item{\code{ STUDYID }}{ text - Study Identifier }
 #' \item{\code{ DOMAIN }}{ text - Domain Abbreviation }
@@ -126,7 +126,7 @@
 
 #' @title sdtm_ex
 #' @description Exposure data frame - One record per constant dosing interval per subject
-#' @format a data frame with 591 rows and 17 columns:
+#' @format a data frame with 591 rows and 17 columns. See \url{https://github.com/SafetyGraphics/safetyData/blob/main/data-raw/sdtm/README.md} for more details and full data specification. Columns:
 #' \describe{
 #' \item{\code{ STUDYID }}{ text - Study Identifier }
 #' \item{\code{ DOMAIN }}{ text - Domain Abbreviation }
@@ -151,7 +151,7 @@
 
 #' @title sdtm_lb
 #' @description Laboratory Tests Results data frame - One record per analyte per planned time point number per time point reference per visit per subject
-#' @format a data frame with 59580 rows and 23 columns:
+#' @format a data frame with 59580 rows and 23 columns. See \url{https://github.com/SafetyGraphics/safetyData/blob/main/data-raw/sdtm/README.md} for more details and full data specification. Columns:
 #' \describe{
 #' \item{\code{ STUDYID }}{ text - Study Identifier }
 #' \item{\code{ DOMAIN }}{ text - Domain Abbreviation }
@@ -182,7 +182,7 @@
 
 #' @title sdtm_mh
 #' @description Medical History data frame - One record per medical history event per subject
-#' @format a data frame with 1818 rows and 19 columns:
+#' @format a data frame with 1818 rows and 19 columns. See \url{https://github.com/SafetyGraphics/safetyData/blob/main/data-raw/sdtm/README.md} for more details and full data specification. Columns:
 #' \describe{
 #' \item{\code{ STUDYID }}{ text - Study Identifier }
 #' \item{\code{ DOMAIN }}{ text - Domain Abbreviation }
@@ -209,7 +209,7 @@
 
 #' @title sdtm_qs
 #' @description Questionnaires data frame - One record per questionnaire per question per time point per visit per subject
-#' @format a data frame with 121749 rows and 20 columns:
+#' @format a data frame with 121749 rows and 20 columns. See \url{https://github.com/SafetyGraphics/safetyData/blob/main/data-raw/sdtm/README.md} for more details and full data specification. Columns:
 #' \describe{
 #' \item{\code{ STUDYID }}{ text - Study Identifier }
 #' \item{\code{ DOMAIN }}{ text - Domain Abbreviation }
@@ -237,7 +237,7 @@
 
 #' @title sdtm_relrec
 #' @description Related Records data frame - One record per related record, group of records or datasets
-#' @format a data frame with 234 rows and 7 columns:
+#' @format a data frame with 234 rows and 7 columns. See \url{https://github.com/SafetyGraphics/safetyData/blob/main/data-raw/sdtm/README.md} for more details and full data specification. Columns:
 #' \describe{
 #' \item{\code{ STUDYID }}{ text - Study Identifier }
 #' \item{\code{ RDOMAIN }}{ text - Related Domain Abbreviation }
@@ -252,7 +252,7 @@
 
 #' @title sdtm_sc
 #' @description Subject Characteristics data frame - One record per characteristic per subject
-#' @format a data frame with 254 rows and 14 columns:
+#' @format a data frame with 254 rows and 14 columns. See \url{https://github.com/SafetyGraphics/safetyData/blob/main/data-raw/sdtm/README.md} for more details and full data specification. Columns:
 #' \describe{
 #' \item{\code{ STUDYID }}{ text - Study Identifier }
 #' \item{\code{ DOMAIN }}{ text - Domain Abbreviation }
@@ -274,7 +274,7 @@
 
 #' @title sdtm_se
 #' @description Subject Elements data frame - One record per actual Element per subject
-#' @format a data frame with 752 rows and 9 columns:
+#' @format a data frame with 752 rows and 9 columns. See \url{https://github.com/SafetyGraphics/safetyData/blob/main/data-raw/sdtm/README.md} for more details and full data specification. Columns:
 #' \describe{
 #' \item{\code{ STUDYID }}{ text - Study Identifier }
 #' \item{\code{ DOMAIN }}{ text - Domain Abbreviation }
@@ -291,7 +291,7 @@
 
 #' @title sdtm_suppae
 #' @description Supplemental Qualifiers for AE data frame - One record per IDVAR, IDVARVAL, and QNAM value per subject
-#' @format a data frame with 1191 rows and 10 columns:
+#' @format a data frame with 1191 rows and 10 columns. See \url{https://github.com/SafetyGraphics/safetyData/blob/main/data-raw/sdtm/README.md} for more details and full data specification. Columns:
 #' \describe{
 #' \item{\code{ STUDYID }}{ text - Study Identifier }
 #' \item{\code{ RDOMAIN }}{ text - Related Domain Abbreviation }
@@ -309,7 +309,7 @@
 
 #' @title sdtm_suppdm
 #' @description Supplemental Qualifiers for DM data frame - One record per IDVAR, IDVARVAL, and QNAM value per subject
-#' @format a data frame with 1197 rows and 10 columns:
+#' @format a data frame with 1197 rows and 10 columns. See \url{https://github.com/SafetyGraphics/safetyData/blob/main/data-raw/sdtm/README.md} for more details and full data specification. Columns:
 #' \describe{
 #' \item{\code{ STUDYID }}{ text - Study Identifier }
 #' \item{\code{ RDOMAIN }}{ text - Related Domain Abbreviation }
@@ -327,7 +327,7 @@
 
 #' @title sdtm_suppds
 #' @description Supplemental Qualifiers for DS data frame - One record per IDVAR, IDVARVAL, and QNAM value per subject
-#' @format a data frame with 3 rows and 10 columns:
+#' @format a data frame with 3 rows and 10 columns. See \url{https://github.com/SafetyGraphics/safetyData/blob/main/data-raw/sdtm/README.md} for more details and full data specification. Columns:
 #' \describe{
 #' \item{\code{ STUDYID }}{ text - Study Identifier }
 #' \item{\code{ RDOMAIN }}{ text - Related Domain Abbreviation }
@@ -345,7 +345,7 @@
 
 #' @title sdtm_supplb
 #' @description Supplemental Qualifiers for LB data frame - One record per IDVAR, IDVARVAL, and QNAM value per subject
-#' @format a data frame with 64403 rows and 10 columns:
+#' @format a data frame with 64403 rows and 10 columns. See \url{https://github.com/SafetyGraphics/safetyData/blob/main/data-raw/sdtm/README.md} for more details and full data specification. Columns:
 #' \describe{
 #' \item{\code{ STUDYID }}{ text - Study Identifier }
 #' \item{\code{ RDOMAIN }}{ text - Related Domain Abbreviation }
@@ -363,7 +363,7 @@
 
 #' @title sdtm_sv
 #' @description Subject Visits data frame - One record per actual visit per subject
-#' @format a data frame with 3559 rows and 8 columns:
+#' @format a data frame with 3559 rows and 8 columns. See \url{https://github.com/SafetyGraphics/safetyData/blob/main/data-raw/sdtm/README.md} for more details and full data specification. Columns:
 #' \describe{
 #' \item{\code{ STUDYID }}{ text - Study Identifier }
 #' \item{\code{ DOMAIN }}{ text - Domain Abbreviation }
@@ -379,7 +379,7 @@
 
 #' @title sdtm_ta
 #' @description Trial Arms data frame - One record per planned Element per Arm
-#' @format a data frame with 8 rows and 10 columns:
+#' @format a data frame with 8 rows and 10 columns. See \url{https://github.com/SafetyGraphics/safetyData/blob/main/data-raw/sdtm/README.md} for more details and full data specification. Columns:
 #' \describe{
 #' \item{\code{ STUDYID }}{ text - Study Identifier }
 #' \item{\code{ DOMAIN }}{ text - Domain Abbreviation }
@@ -397,7 +397,7 @@
 
 #' @title sdtm_te
 #' @description Trial Elements data frame - One record per planned Element
-#' @format a data frame with 7 rows and 7 columns:
+#' @format a data frame with 7 rows and 7 columns. See \url{https://github.com/SafetyGraphics/safetyData/blob/main/data-raw/sdtm/README.md} for more details and full data specification. Columns:
 #' \describe{
 #' \item{\code{ STUDYID }}{ text - Study Identifier }
 #' \item{\code{ DOMAIN }}{ text - Domain Abbreviation }
@@ -412,7 +412,7 @@
 
 #' @title sdtm_ti
 #' @description Trial Inclusion/ Exclusion Criteria data frame - One record per I/E criterion
-#' @format a data frame with 31 rows and 6 columns:
+#' @format a data frame with 31 rows and 6 columns. See \url{https://github.com/SafetyGraphics/safetyData/blob/main/data-raw/sdtm/README.md} for more details and full data specification. Columns:
 #' \describe{
 #' \item{\code{ STUDYID }}{ text - Study Identifier }
 #' \item{\code{ DOMAIN }}{ text - Domain Abbreviation }
@@ -426,7 +426,7 @@
 
 #' @title sdtm_ts
 #' @description Trial Summary data frame - One record per trial summary parameter value
-#' @format a data frame with 33 rows and 6 columns:
+#' @format a data frame with 33 rows and 6 columns. See \url{https://github.com/SafetyGraphics/safetyData/blob/main/data-raw/sdtm/README.md} for more details and full data specification. Columns:
 #' \describe{
 #' \item{\code{ STUDYID }}{ text - Study Identifier }
 #' \item{\code{ DOMAIN }}{ text - Domain Abbreviation }
@@ -440,7 +440,7 @@
 
 #' @title sdtm_tv
 #' @description Trial Visits data frame - One record per planned Visit per Arm
-#' @format a data frame with 21 rows and 9 columns:
+#' @format a data frame with 21 rows and 9 columns. See \url{https://github.com/SafetyGraphics/safetyData/blob/main/data-raw/sdtm/README.md} for more details and full data specification. Columns:
 #' \describe{
 #' \item{\code{ STUDYID }}{ text - Study Identifier }
 #' \item{\code{ DOMAIN }}{ text - Domain Abbreviation }
@@ -457,7 +457,7 @@
 
 #' @title sdtm_vs
 #' @description Vital Signs data frame - One record per vital sign measurement per time point per visit per subject
-#' @format a data frame with 29643 rows and 24 columns:
+#' @format a data frame with 29643 rows and 24 columns. See \url{https://github.com/SafetyGraphics/safetyData/blob/main/data-raw/sdtm/README.md} for more details and full data specification. Columns:
 #' \describe{
 #' \item{\code{ STUDYID }}{ text - Study Identifier }
 #' \item{\code{ DOMAIN }}{ text - Domain Abbreviation }

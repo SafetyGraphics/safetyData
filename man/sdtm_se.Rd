@@ -5,7 +5,7 @@
 \alias{sdtm_se}
 \title{sdtm_se}
 \format{
-a data frame with 752 rows and 9 columns:
+a data frame with 752 rows and 9 columns. See \url{https://github.com/SafetyGraphics/safetyData/blob/main/data-raw/sdtm/README.md} for more details and full data specification. Columns:
 \describe{
 \item{\code{ STUDYID }}{ text - Study Identifier }
 \item{\code{ DOMAIN }}{ text - Domain Abbreviation }

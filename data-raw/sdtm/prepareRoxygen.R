@@ -38,7 +38,7 @@ roxyheaders <- unlist(
             roxy<-c(
                 paste("#' @title", d), 
                 paste("#' @description", metaDomain$Description,"data frame -",metaDomain$Structure), 
-                paste("#' @format a data frame with",dim(df)[1], "rows and", dim(df)[2],"columns:"),
+                paste("#' @format a data frame with",dim(df)[1], "rows and", dim(df)[2],"columns. See \\url{https://github.com/SafetyGraphics/safetyData/blob/main/data-raw/sdtm/README.md} for more details and full data specification. Columns:"),
                 paste("#' \\describe{"),
                 columns,
                 paste("#'}"),

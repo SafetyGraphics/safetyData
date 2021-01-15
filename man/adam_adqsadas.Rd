@@ -5,7 +5,7 @@
 \alias{adam_adqsadas}
 \title{adam_adqsadas}
 \format{
-a data frame with 12463 rows and 40 columns. See \url{https://github.com/SafetyGraphics/safetyData/tree/main/data-raw/adam/README.md} for more details and full data specification
+a data frame with 12463 rows and 40 columns. See \url{https://github.com/SafetyGraphics/safetyData/blob/main/data-raw/adam/README.md} for more details and full data specification.
 }
 \usage{
 adam_adqsadas
