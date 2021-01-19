@@ -1,5 +1,7 @@
 <!-- badges: start -->
+[![CRAN](https://www.r-pkg.org/badges/version/safetyData?color=green)](https://cran.r-project.org/package=safetyData)
 [![R-CMD-check](https://github.com/SafetyGraphics/safetyData/workflows/R-CMD-check/badge.svg)](https://github.com/SafetyGraphics/safetyData/actions)
+
 <!-- badges: end -->
   
 # safetyData
