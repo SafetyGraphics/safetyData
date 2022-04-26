@@ -21,10 +21,10 @@ Basic documentation for each data file is provided in help files (e.g. `?adam_ad
 All data sets are provided with a prefix specifying the data format (`adam_xxx` or `sdtm_xxx`) and can be accessed using standard methods: 
 
 ```
-install.packages(safetyData)
+install.packages("safetyData")
 library(safetyData)
-head(safetyData::adam_adlb) 
-table(safetyData::sdtm_ta$arm)
+head(safetyData::adam_adlbc) 
+table(safetyData::sdtm_ta$ARMCD)
 ```
 
 # Acknowledgments
