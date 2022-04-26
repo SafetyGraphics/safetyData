@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://pkgdown.r-lib.org/404.html</loc>
+  </url>
+  <url>
+    <loc>https://pkgdown.r-lib.org/LICENSE-text.html</loc>
+  </url>
+  <url>
+    <loc>https://pkgdown.r-lib.org/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>https://pkgdown.r-lib.org/authors.html</loc>
+  </url>
+  <url>
     <loc>https://pkgdown.r-lib.org/index.html</loc>
+  </url>
+  <url>
+    <loc>https://pkgdown.r-lib.org/news/index.html</loc>
   </url>
   <url>
     <loc>https://pkgdown.r-lib.org/reference/adam_adae.html</loc>
@@ -32,6 +47,9 @@
   </url>
   <url>
     <loc>https://pkgdown.r-lib.org/reference/adam_advs.html</loc>
+  </url>
+  <url>
+    <loc>https://pkgdown.r-lib.org/reference/index.html</loc>
   </url>
   <url>
     <loc>https://pkgdown.r-lib.org/reference/sdtm_ae.html</loc>

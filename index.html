@@ -19,6 +19,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -31,18 +33,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">safetyData</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.0.0</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="reference/index.html">Reference</a>
 </li>
@@ -65,75 +61,87 @@
 
 
 <!-- badges: end -->
-<div id="safetydata" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#safetydata" class="anchor"></a>safetyData</h1></div>
+<div class="section level1">
+<div class="page-header"><h1 id="safetydata">safetyData<a class="anchor" aria-label="anchor" href="#safetydata"></a>
+</h1></div>
 <p>safetyData is an R package with sample CDISC clinical trial data sets.</p>
 </div>
-<div id="data-overview" class="section level1">
-<h1 class="hasAnchor">
-<a href="#data-overview" class="anchor"></a>Data Overview</h1>
-<p>The package reformats PHUSE’s sample <a href="https://github.com/phuse-org/phuse-scripts/tree/master/data/adam/cdiscpilot01">ADaM</a> and <a href="https://github.com/phuse-org/phuse-scripts/tree/master/data/sdtm/cdiscpilot01">SDTM</a> datasets as an R package following R <a href="https://r-pkgs.org/data.html">data best practices</a>.</p>
-<p>PHUSE released the data under the permissive <a href="https://github.com/phuse-org/phuse-scripts/blob/master/LICENSE.md">MIT license</a>, so reuse with attribution is encouraged. The data are especially useful for prototyping new tables, listings and figures and for writing automated tests.</p>
-<p>Basic documentation for each data file is provided in help files (e.g. <code><a href="reference/adam_adae.html">?adam_adae</a></code>). Full data specifications in the form of <a href="https://www.cdisc.org/standards/data-exchange/define-xml">define.xml</a> files can also be found at the links above (<a href="https://github.com/phuse-org/phuse-scripts/blob/master/data/adam/cdiscpilot01/define.pdf">pdf</a> for ADaM and <a href="https://github.com/phuse-org/phuse-scripts/blob/master/data/sdtm/cdiscpilot01/define.pdf">pdf</a> for SDTM).</p>
+<div class="section level1">
+<h1 id="data-overview">Data Overview<a class="anchor" aria-label="anchor" href="#data-overview"></a>
+</h1>
+<p>The package reformats PHUSE’s sample <a href="https://github.com/phuse-org/phuse-scripts/tree/master/data/adam/cdiscpilot01" class="external-link">ADaM</a> and <a href="https://github.com/phuse-org/phuse-scripts/tree/master/data/sdtm/cdiscpilot01" class="external-link">SDTM</a> datasets as an R package following R <a href="https://r-pkgs.org/data.html" class="external-link">data best practices</a>.</p>
+<p>PHUSE released the data under the permissive <a href="https://github.com/phuse-org/phuse-scripts/blob/master/LICENSE.md" class="external-link">MIT license</a>, so reuse with attribution is encouraged. The data are especially useful for prototyping new tables, listings and figures and for writing automated tests.</p>
+<p>Basic documentation for each data file is provided in help files (e.g. <code><a href="reference/adam_adae.html">?adam_adae</a></code>). Full data specifications in the form of <a href="https://www.cdisc.org/standards/data-exchange/define-xml" class="external-link">define.xml</a> files can also be found at the links above (<a href="https://github.com/phuse-org/phuse-scripts/blob/master/data/adam/cdiscpilot01/define.pdf" class="external-link">pdf</a> for ADaM and <a href="https://github.com/phuse-org/phuse-scripts/blob/master/data/sdtm/cdiscpilot01/define.pdf" class="external-link">pdf</a> for SDTM).</p>
 </div>
-<div id="usage" class="section level1">
-<h1 class="hasAnchor">
-<a href="#usage" class="anchor"></a>Usage</h1>
+<div class="section level1">
+<h1 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
+</h1>
 <p>All data sets are provided with a prefix specifying the data format (<code>adam_xxx</code> or <code>sdtm_xxx</code>) and can be accessed using standard methods:</p>
-<pre><code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages(safetyData)
-library(safetyData)
-head(safetyData::adam_adlb) 
-table(safetyData::sdtm_ta$arm)</a></code></pre>
+<pre><code><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"safetyData"</span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">safetyData</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu">safetyData</span><span class="fu">::</span><span class="va"><a href="reference/adam_adlbc.html">adam_adlbc</a></span><span class="op">)</span> 
+<span class="fu"><a href="https://rdrr.io/r/base/table.html" class="external-link">table</a></span><span class="op">(</span><span class="fu">safetyData</span><span class="fu">::</span><span class="va"><a href="reference/sdtm_ta.html">sdtm_ta</a></span><span class="op">$</span><span class="va">ARMCD</span><span class="op">)</span></code></pre>
 </div>
-<div id="acknowledgments" class="section level1">
-<h1 class="hasAnchor">
-<a href="#acknowledgments" class="anchor"></a>Acknowledgments</h1>
-<p>Thanks to <a href="https://phuse.global/">PHUSE</a> and it’s member organizations for releasing the data.</p>
+<div class="section level1">
+<h1 id="acknowledgments">Acknowledgments<a class="anchor" aria-label="anchor" href="#acknowledgments"></a>
+</h1>
+<p>Thanks to <a href="https://phuse.global/" class="external-link">PHUSE</a> and it’s member organizations for releasing the data.</p>
 </div>
 
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=safetyData">https://​cloud.r-project.org/​package=safetyData</a>
-</li>
+<li><a href="https://cloud.r-project.org/package=safetyData" class="external-link">View on CRAN</a></li>
 </ul>
 </div>
+
 <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
-<li><small><a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
+<li><small><a href="https://opensource.org/licenses/mit-license.php" class="external-link">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
 </ul>
 </div>
+
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html#citation">Citing safetyData</a></li>
+</ul>
+</div>
+
 <div class="developers">
-<h2>Developers</h2>
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
 <li>Jeremy Wildfire <br><small class="roles"> Author, maintainer </small>  </li>
 <li>Renan Escalante Chong <br><small class="roles"> Author </small>  </li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://cran.r-project.org/package=safetyData"><img src="https://www.r-pkg.org/badges/version/safetyData?color=green" alt="CRAN"></a></li>
-<li><a href="https://github.com/SafetyGraphics/safetyData/actions"><img src="https://github.com/SafetyGraphics/safetyData/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://cran.r-project.org/package=safetyData" class="external-link"><img src="https://www.r-pkg.org/badges/version/safetyData?color=green" alt="CRAN"></a></li>
+<li><a href="https://github.com/SafetyGraphics/safetyData/actions" class="external-link"><img src="https://github.com/SafetyGraphics/safetyData/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
 </ul>
 </div>
-</div>
+
+  </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by Jeremy Wildfire, Renan Escalante Chong.</p>
+  <p></p>
+<p>Developed by Jeremy Wildfire, Renan Escalante Chong.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 2.0.2.</p>
 </div>
 
       </footer>
@@ -141,6 +149,8 @@ table(safetyData::sdtm_ta$arm)</a></code></pre>
 
   
 
+
+  
 
   </body>
 </html>
